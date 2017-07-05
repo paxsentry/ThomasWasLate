@@ -51,7 +51,7 @@ sf::Vector2f PlayableCharacter::getCenter()
 {
    return sf::Vector2f(
       m_position.x + m_sprite.getGlobalBounds().width / 2,
-      m_position.y + m_sprite.getGlobalBounds().contains / 2
+      m_position.y + m_sprite.getGlobalBounds().height / 2
    );
 }
 
