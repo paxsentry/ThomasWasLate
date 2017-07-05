@@ -3,6 +3,8 @@
 
 #include <SFML/Graphics.hpp>
 #include "textureHolder.h"
+#include "thomas.h"
+#include "bob.h"
 
 class Engine
 {
@@ -13,6 +15,9 @@ public:
 
 private:
    TextureHolder m_th;
+
+   Thomas m_thomas;
+   Bob m_bob;
 
    const int TILE_SIZE = 50;
    const int VERTS_IN_QUAD = 4;

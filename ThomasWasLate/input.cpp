@@ -15,4 +15,12 @@ void Engine::input() {
          if (sf::Keyboard::isKeyPressed(sf::Keyboard::E)) { m_splitScreen = !m_splitScreen; }
       }
    }
+
+   if (m_thomas.handleInput()) {
+
+   }
+
+   if (m_bob.handleInput()) {
+
+   }
 }
