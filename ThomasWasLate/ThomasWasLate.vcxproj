@@ -118,18 +118,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="bob.cpp" />
     <ClCompile Include="draw.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="playableCharacter.cpp" />
     <ClCompile Include="textureHolder.cpp" />
+    <ClCompile Include="thomas.cpp" />
     <ClCompile Include="update.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="bob.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="playableCharacter.h" />
     <ClInclude Include="textureHolder.h" />
+    <ClInclude Include="thomas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

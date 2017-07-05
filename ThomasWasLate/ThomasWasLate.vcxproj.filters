@@ -36,6 +36,12 @@
     <ClCompile Include="playableCharacter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="thomas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="bob.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="textureHolder.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="playableCharacter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="thomas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="bob.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
