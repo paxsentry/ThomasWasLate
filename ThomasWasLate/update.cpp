@@ -3,11 +3,7 @@
 
 void Engine::update(float dtAsSeconds) {
    if (m_newLevelRequired) {
-      m_thomas.spawn(sf::Vector2f(0, 0), GRAVITY);
-      m_bob.spawn(sf::Vector2f(100, 0), GRAVITY);
-
-      m_timeRemaining = 10;
-      m_newLevelRequired = false;
+      loadLevel();
    }
 
    if (m_playing) {

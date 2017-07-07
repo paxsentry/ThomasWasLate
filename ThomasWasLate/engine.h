@@ -5,6 +5,7 @@
 #include "textureHolder.h"
 #include "thomas.h"
 #include "bob.h"
+#include "levelManager.h"
 
 class Engine
 {
@@ -18,6 +19,8 @@ private:
 
    Thomas m_thomas;
    Bob m_bob;
+
+   LevelManager m_levelManager;
 
    const int TILE_SIZE = 50;
    const int VERTS_IN_QUAD = 4;
@@ -46,9 +49,17 @@ private:
    float m_timeRemaining = 10;
    sf::Time m_gameTimeTotal;
 
+   sf::VertexArray m_VALevel;
+
+   int** m_ArrayLevel = NULL;
+
+   sf::Texture m_textureTiles;
+
    void input();
    void update(float dtAsSeconds);
    void draw();
+
+   void loadLevel();
 };
 
 #endif // !THOMAS_WAS_LATE_ENGINE
