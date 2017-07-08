@@ -26,7 +26,7 @@ private:
    float m_timeModifier = 1;
    float m_baseTimeLimit = 0;
 
-   int m_currentLevel = 1;
+   int m_currentLevel = 0;
    const int NUM_LEVELS = 4;
 };
 

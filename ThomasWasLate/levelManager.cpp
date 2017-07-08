@@ -64,7 +64,7 @@ int ** LevelManager::nextLevel(sf::VertexArray & rVALevel)
    inputFile.seekg(0, std::ios::beg);
 
    int** arrayLevel = new int*[m_levelSize.y];
-   for (int i = 0; i < m_levelSize.y; i++)
+   for (int i = 0; i < m_levelSize.y; ++i)
    {
       arrayLevel[i] = new int[m_levelSize.x];
    }

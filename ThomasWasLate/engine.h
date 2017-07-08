@@ -60,6 +60,8 @@ private:
    void draw();
 
    void loadLevel();
+
+   bool detectCollision(PlayableCharacter& character);
 };
 
 #endif // !THOMAS_WAS_LATE_ENGINE

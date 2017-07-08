@@ -119,6 +119,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="bob.cpp" />
+    <ClCompile Include="detectCollisions.cpp" />
     <ClCompile Include="draw.cpp" />
     <ClCompile Include="engine.cpp" />
     <ClCompile Include="input.cpp" />

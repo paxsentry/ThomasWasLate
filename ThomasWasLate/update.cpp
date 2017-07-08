@@ -11,6 +11,17 @@ void Engine::update(float dtAsSeconds) {
 
       m_bob.update(dtAsSeconds);
 
+      if (detectCollision(m_thomas) && detectCollision(m_bob)) {
+         m_newLevelRequired = true;
+      }
+      else {
+         detectCollision(m_bob); // Thomas already there
+      }
+
+      // Jump on each head
+      if (m_bob.getFeet().intersects(m_thomas.getHead())) { m_bob.stopFalling(m_thomas.getHead().top); }
+      else if (m_thomas.getFeet().intersects(m_bob.getHead())) { m_thomas.stopFalling(m_bob.getHead().top); }
+
       m_timeRemaining -= dtAsSeconds;
 
       if (m_timeRemaining <= 0) { m_newLevelRequired = true; }
