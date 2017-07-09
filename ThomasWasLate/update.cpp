@@ -30,7 +30,7 @@ void Engine::update(float dtAsSeconds) {
 
    std::vector<sf::Vector2f>::iterator it;
 
-   for (it = m_fireEmitters.begin(); it !=m_fireEmitters.end() ; it++)
+   for (it = m_fireEmitters.begin(); it != m_fireEmitters.end(); it++)
    {
       float posX = (*it).x;
       float posY = (*it).y;
@@ -49,5 +49,20 @@ void Engine::update(float dtAsSeconds) {
    else {
       if (m_characterOne) { m_mainView.setCenter(m_thomas.getCenter()); }
       else { m_mainView.setCenter(m_bob.getCenter()); }
+   }
+
+   m_frameSinceLastUpdate++;
+
+   if (m_frameSinceLastUpdate > m_targetFramesPerUpdate) {
+      std::stringstream ssTime;
+      std::stringstream ssLevel;
+
+      ssTime << (int)m_timeRemaining;
+      m_hud.setTime(ssTime.str());
+
+      ssLevel << "Level: " << m_levelManager.getCurrentLevel();
+      m_hud.setLevel(ssLevel.str());
+
+      m_frameSinceLastUpdate = 0;
    }
 }

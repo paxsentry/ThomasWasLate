@@ -17,7 +17,7 @@ void Engine::draw() {
       m_window.setView(m_BG_leftView);
       m_window.draw(m_sprite_Background);
       m_window.setView(m_leftView);
-      
+
       m_window.draw(m_VALevel, &m_textureTiles);
 
       m_window.draw(m_bob.getSprite()); // Reverse order to provide "priority" on this view
@@ -34,6 +34,10 @@ void Engine::draw() {
    }
 
    m_window.setView(m_hudView);
+   m_window.draw(m_hud.getLevel());
+   m_window.draw(m_hud.getTime());
+
+   if (!m_playing) { m_window.draw(m_hud.getMessage()); }
 
    m_window.display();
 }

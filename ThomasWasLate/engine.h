@@ -7,6 +7,7 @@
 #include "bob.h"
 #include "levelManager.h"
 #include "SoundManager.h"
+#include "hud.h"
 
 class Engine
 {
@@ -23,6 +24,10 @@ private:
 
    LevelManager m_levelManager;
    SoundManager m_soundManager;
+   
+   Hud m_hud;
+   int m_frameSinceLastUpdate = 0;
+   int m_targetFramesPerUpdate = 500;
 
    const int TILE_SIZE = 50;
    const int VERTS_IN_QUAD = 4;
