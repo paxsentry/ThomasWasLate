@@ -35,10 +35,10 @@ bool Engine::detectCollision(PlayableCharacter& character) {
                character.spawn(m_levelManager.getStartPosition(), GRAVITY);
 
                if (m_ArrayLevel[y][x] == 2) {
-                  //Fire sound
+                  m_soundManager.playFallInFire();
                }
                else {
-                  //water sound
+                  m_soundManager.playFallInWater();
                }
             }
          }

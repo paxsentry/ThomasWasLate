@@ -17,10 +17,10 @@ void Engine::input() {
    }
 
    if (m_thomas.handleInput()) {
-
+      m_soundManager.playJump();
    }
 
    if (m_bob.handleInput()) {
-
+      m_soundManager.playJump();
    }
 }

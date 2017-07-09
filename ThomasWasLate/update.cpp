@@ -13,6 +13,7 @@ void Engine::update(float dtAsSeconds) {
 
       if (detectCollision(m_thomas) && detectCollision(m_bob)) {
          m_newLevelRequired = true;
+         m_soundManager.playReachGoal();
       }
       else {
          detectCollision(m_bob); // Thomas already there
@@ -25,6 +26,20 @@ void Engine::update(float dtAsSeconds) {
       m_timeRemaining -= dtAsSeconds;
 
       if (m_timeRemaining <= 0) { m_newLevelRequired = true; }
+   }
+
+   std::vector<sf::Vector2f>::iterator it;
+
+   for (it = m_fireEmitters.begin(); it !=m_fireEmitters.end() ; it++)
+   {
+      float posX = (*it).x;
+      float posY = (*it).y;
+
+      sf::FloatRect localRect(posX - 250, posY - 250, 500, 500);
+
+      if (m_thomas.getPosition().intersects(localRect)) {
+         m_soundManager.playFire(sf::Vector2f(posX, posY), m_thomas.getCenter());
+      }
    }
 
    if (m_splitScreen) {
