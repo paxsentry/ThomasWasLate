@@ -6,6 +6,7 @@
 #include "thomas.h"
 #include "bob.h"
 #include "levelManager.h"
+#include "SoundManager.h"
 
 class Engine
 {
@@ -21,6 +22,7 @@ private:
    Bob m_bob;
 
    LevelManager m_levelManager;
+   SoundManager m_soundManager;
 
    const int TILE_SIZE = 50;
    const int VERTS_IN_QUAD = 4;
@@ -62,6 +64,9 @@ private:
    void loadLevel();
 
    bool detectCollision(PlayableCharacter& character);
+
+   void populateEmitters(std::vector <sf::Vector2f>& vSoundEmitters, int** arrayLevel);
+   std::vector <sf::Vector2f> m_fireEmitters;
 };
 
 #endif // !THOMAS_WAS_LATE_ENGINE

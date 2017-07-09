@@ -11,6 +11,8 @@ void Engine::loadLevel() {
 
    m_ArrayLevel = m_levelManager.nextLevel(m_VALevel);
 
+   populateEmitters(m_fireEmitters, m_ArrayLevel);
+
    m_timeRemaining = m_levelManager.getTimeLimit();
 
    m_thomas.spawn(m_levelManager.getStartPosition(), GRAVITY);
