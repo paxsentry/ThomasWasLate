@@ -51,6 +51,8 @@ private:
    sf::Sprite m_sprite_Background;
    sf::Texture m_texture_Background;
 
+   sf::Shader m_rippleShader;
+
    bool m_playing = false;
    bool m_characterOne = true;
    bool m_splitScreen = false;

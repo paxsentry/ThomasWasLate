@@ -17,6 +17,13 @@ Engine::Engine()
    m_BG_leftView.setViewport(sf::FloatRect(0.001f, 0.001f, 0.498f, 0.998f));
    m_BG_rightView.setViewport(sf::FloatRect(0.5f, 0.001f, 0.499f, 0.998f));
 
+   if (!sf::Shader::isAvailable()) {
+      m_window.close();
+   }
+   else {
+      m_rippleShader.loadFromFile("shaders/vertShader.vert", "shaders/rippleShader.frag");
+   }
+
    m_texture_Background = TextureHolder::getTexture("graphics/background.png");
    m_sprite_Background.setTexture(m_texture_Background);
 
