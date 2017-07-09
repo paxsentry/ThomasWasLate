@@ -51,6 +51,14 @@ bool Engine::detectCollision(PlayableCharacter& character) {
             else if (character.getHead().intersects(block)) { character.stopJump(); }
          }
 
+         if (!m_particleSystem.isRunning()) {
+            if (m_ArrayLevel[y][x] == 2 || m_ArrayLevel[y][x] == 3) {
+               if (character.getFeet().intersects(block)) {
+                  m_particleSystem.emitParticles(character.getCenter());
+               }
+            }
+         }
+
          if (m_ArrayLevel[y][x] == 4) {
             reachedGoal = true;
          }

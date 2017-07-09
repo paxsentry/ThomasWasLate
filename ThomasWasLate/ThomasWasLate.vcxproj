@@ -127,6 +127,8 @@
     <ClCompile Include="levelManager.cpp" />
     <ClCompile Include="loadLevel.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Particle.cpp" />
+    <ClCompile Include="particleSystem.cpp" />
     <ClCompile Include="playableCharacter.cpp" />
     <ClCompile Include="populateEmitters.cpp" />
     <ClCompile Include="soundManager.cpp" />
@@ -139,6 +141,8 @@
     <ClInclude Include="engine.h" />
     <ClInclude Include="hud.h" />
     <ClInclude Include="levelManager.h" />
+    <ClInclude Include="Particle.h" />
+    <ClInclude Include="particleSystem.h" />
     <ClInclude Include="playableCharacter.h" />
     <ClInclude Include="soundManager.h" />
     <ClInclude Include="textureHolder.h" />

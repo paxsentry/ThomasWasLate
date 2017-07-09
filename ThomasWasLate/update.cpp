@@ -65,4 +65,8 @@ void Engine::update(float dtAsSeconds) {
 
       m_frameSinceLastUpdate = 0;
    }
+
+   if (m_particleSystem.isRunning()) {
+      m_particleSystem.update(dtAsSeconds);
+   }
 }

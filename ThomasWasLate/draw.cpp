@@ -12,6 +12,10 @@ void Engine::draw() {
 
       m_window.draw(m_thomas.getSprite());
       m_window.draw(m_bob.getSprite());
+
+      if (m_particleSystem.isRunning()) {
+         m_window.draw(m_particleSystem);
+      }
    }
    else {
       m_window.setView(m_BG_leftView);
@@ -23,6 +27,10 @@ void Engine::draw() {
       m_window.draw(m_bob.getSprite()); // Reverse order to provide "priority" on this view
       m_window.draw(m_thomas.getSprite());
 
+      if (m_particleSystem.isRunning()) {
+         m_window.draw(m_particleSystem);
+      }
+
       m_window.setView(m_BG_rightView);
       m_window.draw(m_sprite_Background);
       m_window.setView(m_rightView);
@@ -31,6 +39,10 @@ void Engine::draw() {
 
       m_window.draw(m_thomas.getSprite()); // Same reason
       m_window.draw(m_bob.getSprite());
+
+      if (m_particleSystem.isRunning()) {
+         m_window.draw(m_particleSystem);
+      }
    }
 
    m_window.setView(m_hudView);
